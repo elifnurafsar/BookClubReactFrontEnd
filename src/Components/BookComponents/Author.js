@@ -5,6 +5,7 @@ import logo from '../../images/kids_book.svg';
 import img from '../../images/starry_sky.jpg';
 import { GetAuthorByName } from "../../Service/AuthorService";
 import search from '../../images/search.svg';
+import leprechaun from '../../images/leprechaun.svg';
 import AuthorCard from "../Cards/AuthorCard";
 
 function Author(){
@@ -64,7 +65,7 @@ function Author(){
                     
                     return(
                         <div>
-                            <div style={{backgroundColor: '#000080', height: "auto", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
+                            <div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
                                 <img  style={{ width: "20px", height: "20px"}}  src={search} alt="Book Club Logo"/>
                                 <input type="text" placeholder='Name' className='input_box' onChange={e => searchFor(e)} />
                             </div>
@@ -83,11 +84,16 @@ function Author(){
     }
 
     if(error){
-        return (<div> Error! </div>);
+        return (
+            <div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
+                <img width={100} height={100} src={leprechaun} alt="Error screen image. A little girl drawing who has purple hair and pink cone party hut."/>
+                <br></br>
+                Error! 
+            </div>);
     }
     else if(!isLoaded){
-        return (<div style={{backgroundColor: '#000080', height: "auto", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
-            <img width={100} height={100} src={logo} alt="loading screen image. A little girl drawing who has purole hair and pink cone party hut."/>
+        return (<div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
+            <img width={100} height={100} src={logo} alt="loading screen image. A little girl drawing who has purple hair and pink cone party hut."/>
             <br></br>
             LOADING...
         </div>);
