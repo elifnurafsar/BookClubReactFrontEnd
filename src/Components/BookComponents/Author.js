@@ -33,7 +33,6 @@ function Author(){
 
     const searchFor = async(e) => {
         var str = e.target.value;
-        
         if(str.length === 0){
             await fetch("Author/")
             .then(res => res.json())
@@ -51,13 +50,13 @@ function Author(){
             )
         }
         else{
-            await GetAuthorByName("/Author", str)
+            await GetAuthorByName(str)
             .then(res => res.json())
             .then(
-                (results) => {
+                (res) => {
                     //data loaded
                     setIsLoaded(true);
-                    setAuthorList(results);
+                    setAuthorList(res);
                 },
                 (error) => {
                     //bc even with the errors the page is loaded and we should inform visitors instead of keep them waiting
@@ -86,17 +85,17 @@ function Author(){
     if(error){
         return (
             <div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
-                <img width={100} height={100} src={leprechaun} alt="Error screen image. A little girl drawing who has purple hair and pink cone party hut."/>
+                <img width={100} height={100} style={{marginTop: "5%"}} src={leprechaun} alt="Error screen image. A little girl drawing who has purple hair and pink cone party hut."/>
                 <br></br>
-                Error! 
-            </div>);
+                <h1 style={{color: "whitesmoke"}}>Error!</h1> 
+            </div>)
     }
     else if(!isLoaded){
         return (<div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
-            <img width={100} height={100} src={logo} alt="loading screen image. A little girl drawing who has purple hair and pink cone party hut."/>
+            <img width={100} height={100} style={{marginTop: "5%"}} src={logo} alt="loading screen image. A little girl drawing who has purple hair and pink cone party hut."/>
             <br></br>
-            LOADING...
-        </div>);
+            <h1 tyle={{color: "whitesmoke"}}>LOADING...</h1>
+        </div>)
     }
     else{
         return(
