@@ -94,7 +94,7 @@ function Author(){
         return (<div style={{backgroundColor: '#000080', height: "100vh", overflow:"auto", marginRight: "-20px", marginTop: "-30px"}}>
             <img width={100} height={100} style={{marginTop: "5%"}} src={logo} alt="loading screen image. A little girl drawing who has purple hair and pink cone party hut."/>
             <br></br>
-            <h1 tyle={{color: "whitesmoke"}}>LOADING...</h1>
+            <h1 style={{color: "whitesmoke"}}>LOADING...</h1>
         </div>)
     }
     else{

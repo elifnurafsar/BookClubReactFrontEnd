@@ -177,6 +177,13 @@ https://user-images.githubusercontent.com/60623941/227054426-a2acaafd-b114-4566-
 <img src="https://user-images.githubusercontent.com/60623941/227054689-78a73fe1-b34c-4880-8724-a4d6c604d062.PNG" alt="User Profile / My Orders page example."/>
 
 <br>
+
+## Error Pages
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/60623941/227305031-761cc4df-486a-411a-8bfd-3daaf79e1df8.PNG" width="500" alt="Wrong URL Error example."/>
+  <img src="https://user-images.githubusercontent.com/60623941/227305074-109e349f-88dd-4e6b-ab84-6412befda87b.PNG" width="500" alt="An error caused from fetching operations."/>
+</p>
+
 <br>
 
 > **Note**
